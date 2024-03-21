@@ -1,10 +1,10 @@
 {
-  "name": "types",
+  "name": "@errbmb/types",
   "version": "0.1.0",
   "main": "src/index.ts",
-  "types": ".output/index.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
-    "/.output"
+    "/dist"
   ],
   "type": "module",
   "devDependencies": {
