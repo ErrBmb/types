@@ -1,11 +1,14 @@
 import { z } from "zod"
 
-export const LoginZodSchema = z.object({
+export const LoginRequestZodSchema = z.object({
   mail: z.string().email(),
   password: z.string().min(5),
 })
+export type LoginRequestType = z.infer<typeof LoginRequestZodSchema>
 
-export type LoginType = z.infer<typeof LoginZodSchema>
+export type LoginResponseType = {
+  token: string
+}
 
 export const UserZodSchema = z.object({
   mail: z.string().email({ message: "Adresse e-mail invalide" }),
