@@ -1,0 +1,13 @@
+{
+  "name": "types",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}
