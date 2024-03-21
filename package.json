@@ -2,9 +2,9 @@
   "name": "types",
   "version": "0.1.0",
   "main": "src/index.ts",
-  "types": "dist/index.d.ts",
+  "types": ".output/index.d.ts",
   "files": [
-    "/dist"
+    "/.output"
   ],
   "type": "module",
   "devDependencies": {
