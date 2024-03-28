@@ -1,4 +1,9 @@
+import { ObjectId } from "mongoose"
 import { z } from "zod"
+
+export type TokenClaims = {
+  sub: ObjectId
+}
 
 export const LoginRequestZodSchema = z.object({
   mail: z.string().email(),
