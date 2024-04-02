@@ -2,7 +2,7 @@ import { ObjectId } from "mongoose"
 import { z } from "zod"
 
 export type TokenClaims = {
-  sub: ObjectId
+  sub: string
 }
 
 export const LoginRequestZodSchema = z.object({

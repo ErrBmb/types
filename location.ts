@@ -51,5 +51,9 @@ export const LocationZodSchema = z.object({
     message: "Une location doit proposer au moins 1 chambre.",
   }),
   perks: z.array(PerksZodSchema),
+  owner: z.string(),
+  city: z.string(),
+  country: z.string(),
+  reviews: z.array(z.string()),
 })
 export type LocationType = z.infer<typeof LocationZodSchema>
