@@ -54,6 +54,5 @@ export const LocationZodSchema = z.object({
   owner: z.string(),
   city: z.string(),
   country: z.string(),
-  reviews: z.array(z.string()),
 })
 export type LocationType = z.infer<typeof LocationZodSchema>
