@@ -4,6 +4,7 @@ export const ReviewZodSchema = z.object({
   author: z.string(),
   location: z.string(),
   message: z.string().optional().default(""),
+  date: z.date(),
   rate: z
     .number()
     .min(0, {
