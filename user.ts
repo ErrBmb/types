@@ -1,4 +1,3 @@
-import { ObjectId } from "mongoose"
 import { z } from "zod"
 
 export type TokenClaims = {
@@ -27,6 +26,10 @@ export const UserZodSchema = z.object({
     .string()
     .min(2, { message: "Votre nom doit faire au moins 2 caractères" }),
   phone_number: z.string(),
+  location: z.object({
+    type: z.enum(["Point"]),
+    coordinates: z.array(z.number()),
+  }),
 })
 
 export type UserType = z.infer<typeof UserZodSchema>

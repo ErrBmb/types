@@ -50,9 +50,14 @@ export const LocationZodSchema = z.object({
   bedrooms: z.array(BedroomZodSchema).min(1, {
     message: "Une location doit proposer au moins 1 chambre.",
   }),
+  rate: z.number().optional(),
   perks: z.array(PerksZodSchema),
   owner: z.string(),
   city: z.string(),
   country: z.string(),
+  location: z.object({
+    type: z.enum(["Point"]),
+    coordinates: z.array(z.number()),
+  }),
 })
 export type LocationType = z.infer<typeof LocationZodSchema>
