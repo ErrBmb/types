@@ -21,7 +21,7 @@ export const UserZodSchema = z.object({
   }),
   first_name: z
     .string()
-    .min(5, { message: "Votre prénom doit faire au moins 2 caractères" }),
+    .min(2, { message: "Votre prénom doit faire au moins 2 caractères" }),
   last_name: z
     .string()
     .min(2, { message: "Votre nom doit faire au moins 2 caractères" }),
