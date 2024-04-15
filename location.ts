@@ -43,9 +43,10 @@ export const BedroomZodSchema = z.object({
     }),
   ),
 })
-export type BeedroomType = z.infer<typeof BedroomZodSchema>
+export type BedroomType = z.infer<typeof BedroomZodSchema>
 
 export const LocationZodSchema = z.object({
+  _id: z.string().optional(),
   about: z.string(),
   bedrooms: z.array(BedroomZodSchema).min(1, {
     message: "Une location doit proposer au moins 1 chambre.",
