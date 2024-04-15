@@ -59,6 +59,7 @@ export const LocationZodSchema = z.object({
     type: z.enum(["Point"]),
     coordinates: z.array(z.number()),
   }),
+  images: z.array(z.string()).default([]),
   price: z.number(),
 })
 export type LocationType = z.infer<typeof LocationZodSchema>
