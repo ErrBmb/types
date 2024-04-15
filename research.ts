@@ -9,7 +9,8 @@ export const ResearchZodType = z.object({
     .number()
     .min(0, { message: "Le nombre minimum à indiquer est 0." }),
   beds: z.number().min(0, { message: "Le nombre minimum à indiquer est 0." }),
-  distance: z.number(),
+  distance: z.number().optional(),
+  maxPrice: z.number(),
 })
 export type ResearchType = z.infer<typeof ResearchZodType>
 
