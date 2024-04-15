@@ -3,8 +3,8 @@ import { LocationZodSchema } from "./location"
 
 export const ResearchZodType = z.object({
   place: z.string(),
-  checkIn: z.date(),
-  checkOut: z.date(),
+  checkIn: z.coerce.date(),
+  checkOut: z.coerce.date(),
   bedrooms: z
     .number()
     .min(0, { message: "Le nombre minimum à indiquer est 0." }),
