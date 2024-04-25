@@ -1,5 +1,4 @@
 import { z } from "zod"
-import { LocationZodSchema } from "./location"
 
 export const ResearchZodType = z.object({
   place: z.string().optional(),
@@ -16,11 +15,3 @@ export const ResearchZodType = z.object({
   maxPrice: z.number().optional(),
 })
 export type ResearchType = z.infer<typeof ResearchZodType>
-
-export const OfferZodType = z.object({
-  location: LocationZodSchema,
-  checkIn: z.date(),
-  checkOut: z.date(),
-  totalPrice: z.number(),
-})
-export type OfferType = z.infer<typeof OfferZodType>
