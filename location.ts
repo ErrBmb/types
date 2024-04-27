@@ -61,6 +61,7 @@ export const LocationZodSchema = z.object({
     coordinates: z.array(z.number()),
   }),
   images: z.array(z.string()).default([]),
+  distance: z.number(),
   price: z.number(),
 })
 export type LocationType = z.infer<typeof LocationZodSchema>
